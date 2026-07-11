@@ -457,3 +457,310 @@ body.dark header{
     transform:translateY(-8px);
 
 }
+/* ==========================================================
+   RESPONSIVE HELPERS
+========================================================== */
+
+.hide{
+    display:none !important;
+}
+
+.text-center{
+    text-align:center;
+}
+
+.mt-1{margin-top:10px;}
+.mt-2{margin-top:20px;}
+.mt-3{margin-top:30px;}
+.mt-4{margin-top:40px;}
+.mt-5{margin-top:50px;}
+
+.mb-1{margin-bottom:10px;}
+.mb-2{margin-bottom:20px;}
+.mb-3{margin-bottom:30px;}
+.mb-4{margin-bottom:40px;}
+.mb-5{margin-bottom:50px;}
+
+/* ==========================================================
+   FORM ELEMENTS
+========================================================== */
+
+input,
+textarea{
+
+    width:100%;
+
+    padding:15px;
+
+    border:1px solid var(--light-gray);
+
+    border-radius:10px;
+
+    font-family:inherit;
+
+    font-size:1rem;
+
+    outline:none;
+
+    transition:var(--transition);
+
+    background:var(--white);
+
+    color:var(--black);
+
+}
+
+input:focus,
+textarea:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 3px rgba(122,31,42,.15);
+
+}
+
+textarea{
+
+    resize:vertical;
+
+    min-height:140px;
+
+}
+
+/* ==========================================================
+   ACCESSIBILITY
+========================================================== */
+
+button:focus,
+a:focus,
+input:focus,
+textarea:focus{
+
+    outline:3px solid rgba(122,31,42,.25);
+
+    outline-offset:3px;
+
+}
+
+/* ==========================================================
+   SELECTION
+========================================================== */
+
+::selection{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:var(--secondary);
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--primary-dark);
+
+}
+
+/* ==========================================================
+   FADE-IN ANIMATION
+========================================================== */
+
+.fade-in{
+
+    animation:fadeIn 1s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+/* ==========================================================
+   FLOAT ANIMATION
+========================================================== */
+
+.float{
+
+    animation:float 4s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================================
+   LOADING SPINNER
+========================================================== */
+
+.loader{
+
+    width:50px;
+
+    height:50px;
+
+    border:5px solid var(--light-gray);
+
+    border-top:5px solid var(--primary);
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+
+    margin:auto;
+
+}
+
+@keyframes spin{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* ==========================================================
+   DARK MODE IMPROVEMENTS
+========================================================== */
+
+body.dark .card,
+body.dark .skill-card,
+body.dark .cert-card,
+body.dark .timeline-item,
+body.dark .project-card,
+body.dark .education-card,
+body.dark .achievement-card{
+
+    background:#1d1d1d;
+
+}
+
+body.dark .project-content p,
+body.dark .timeline-item p,
+body.dark .education-card p,
+body.dark .achievement-card p,
+body.dark .skill-card li,
+body.dark .cert-card p{
+
+    color:#d5d5d5;
+
+}
+
+body.dark .tags span{
+
+    background:rgba(255,255,255,.08);
+
+    color:#f7d27d;
+
+}
+
+body.dark footer{
+
+    background:#0b0b0b;
+
+}
+
+/* ==========================================================
+   IMAGE EFFECTS
+========================================================== */
+
+img{
+
+    transition:var(--transition);
+
+}
+
+img:hover{
+
+    transform:scale(1.02);
+
+}
+
+/* ==========================================================
+   PRINT STYLES
+========================================================== */
+
+@media print{
+
+    header,
+    footer,
+    #scrollTopBtn{
+
+        display:none;
+
+    }
+
+    body{
+
+        background:#fff;
+
+        color:#000;
+
+    }
+
+    section{
+
+        padding:20px 0;
+
+    }
+
+}
+
+/* ==========================================================
+   END OF FILE
+========================================================== */
